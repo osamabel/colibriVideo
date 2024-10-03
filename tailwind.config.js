@@ -9,12 +9,16 @@ module.exports = {
         'md': '768px',
         'lg': '1024px',
         'xl': '1440px',
-        '2xl': '1728px',
+        '2xl': '1750px',
       },
       fontFamily: {
         Lato: ['Lato', 'sans-serif'],
         Raleway: ['Raleway', 'Raleway'],
       },
+      colors:{
+        "primary": "#FF305E",
+        "secondary": "#F35E98"
+      }
     },
   },
   plugins: [],

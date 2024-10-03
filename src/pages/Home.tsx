@@ -1,16 +1,14 @@
-import React from 'react'
-import Header from '../components/Header'
 import Hero from '../components/Hero'
-import Entreprises from '../components/Entreprises'
 import More from '../components/More'
 import Contact from '../components/Contact'
 import NewsLetter from '../components/NewLetter'
+import Entreprises from '../components/Entreprises'
 
 function Home() {
   return (
-    <div className=''>
-        <Header />
+    <div className='relative'>
         <Hero />
+      
         <Entreprises />
         <More 
         title='Les vidéos les plus demandées' 

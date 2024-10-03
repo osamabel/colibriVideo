@@ -8,6 +8,21 @@
 
 
 body{
-  background-color: #171717;
-  color: white;
+  background-color: white;
+  color: black;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.gradient{
+  background: rgb(243,94,152);
+  background: linear-gradient(130deg, rgba(243,94,152,1) 0%, rgba(255,48,94,1) 100%);
+}
+
+.gradientLight{
+  background: rgb(255,255,255);
+  background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%);
 }

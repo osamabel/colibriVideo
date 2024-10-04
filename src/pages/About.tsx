@@ -1,9 +1,4 @@
-import Description from '../components/Description'
-import FAQ from '../components/FAQ';
-import NewsLetter from '../components/NewLetter';
-import HeroPages from '../components/HeroPages';
-import Subscription from '../components/Subscription';
-import Entreprises from '../components/Entreprises';
+import LesVideos from '../components/LesVideos';
 
 const fqa = [
   {
@@ -23,6 +18,8 @@ const fqa = [
 const sub = [
   {
     type: "Basic",
+    plan: 'Freelance',
+    service: 'About us',
     Populaire:false,
     price: "De 1 700 à 5 800 € HT",
     desc: "Le choix le plus adapté pour des vidéos simples et professionnelles.",
@@ -37,6 +34,8 @@ const sub = [
   },
   {
     type: "Standard",
+    plan: 'Collectif de freelances',
+    service: 'About us',
     Populaire: false,
     price: "De 3 200 € à 10 800 € HT",
     desc: "Le meilleur rapport qualité/prix pour une production vidéo supérieure.",
@@ -51,6 +50,8 @@ const sub = [
   },
   {
     type: "Premium",
+    plan: 'Agence',
+    service: 'About us',
     Populaire:true,
     price: "Sur demande",
     desc: "L’option idéale si vous cherchez un concept créatif unique !",
@@ -64,29 +65,27 @@ const sub = [
     ]
   }
 ]
+const desc = {
+  title: "Choisissez la formule qui vous correspond",
+  desc: "Nous nous occupons de trouver les meilleurs pour vous.",
+}
 
+const content = [
+  {
+    title: 'Les dernières vidéos "About Us"',
+    desc: "Inspirez vous des meilleurs exemples.",
+  },
+]
+
+const hero = {
+  title: "About us",
+  desc: "C’est un véritable standard dans une stratégie vidéo digne de ce nom. En expliquant la problématique à laquelle vous vous attaquez et la solution que vous construisez, c’est le format idéal pour présenter votre entreprise à toutes vos audiences.",
+  image: ""
+}
 
 function About() {
   return (
-  <div className="">
-    <div className="container overflow-hidden mx-auto flex items-center justify-center">
-      <div className='w-full'>
-        <HeroPages title={"About us"} desc={"C’est un véritable standard dans une stratégie vidéo digne de ce nom. En expliquant la problématique à laquelle vous vous attaquez et la solution que vous construisez, c’est le format idéal pour présenter votre entreprise à toutes vos audiences."}/>
-        <div className='flex flex-col gap-y-[40px] border-b-[1px] border-white/20 py-[40px]'>
-          <Description title='Les dernières vidéos "About Us"' desc='Inspirez vous des meilleurs exemples.' />
-          <div className=''>
-            0 video
-          </div>
-        </div>
-        <Subscription sub={sub}/>
-        <Entreprises />
-        <FAQ fqa={fqa}/>
-        <NewsLetter/>
-      </div>
-
-    </div>
-  </div>
+    <LesVideos hero={hero} item={content[0]} sub={sub} desc={desc} fqa={fqa}/>
   )
 }
-
 export default About

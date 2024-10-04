@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import { FAQProps } from './FAQ';
 
 const AccordionItem = ({ title, content, isOpen, onClick }: any) => (
-  <div className="w-full bg-white rounded-lg shadow-sm">
+  <div className="w-full bg-white/50 border-b-[1px] border-black/5">
     <button
       className="w-full flex justify-between items-center p-4"
       onClick={onClick}
@@ -36,7 +36,7 @@ const AccordionCostumed = ({fqa} : FAQProps) => {
   };
 
   return (
-    <div className="w-full flex flex-col gap-[10px]">
+    <div className="w-full flex flex-col gap-[5px]">
       {fqa.map((item, index) => (
         <AccordionItem
           key={index}

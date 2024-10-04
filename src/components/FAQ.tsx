@@ -7,7 +7,7 @@ export interface FAQProps{
 
 function FAQ({fqa} : FAQProps) {
   return (
-    <div>
+    <div className='py-[30px]'>
         <h1 className='text-[30px] font-Lato font-[700] mb-[20px]'>FAQ</h1>
         <AccordionCostumed fqa={fqa}/>
     </div>

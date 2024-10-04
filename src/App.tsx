@@ -15,6 +15,17 @@ import Culture from './pages/Culture';
 import Relations from './pages/Relations';
 import Live from './pages/Live';
 import Visite from './pages/Visite';
+import Filmmaker from './pages/Filmmaker';
+import Storyteller from './pages/Storyteller';
+import Monteur from './pages/Monteur';
+import Motiondesigner from './pages/Motiondesigner';
+import Realisateur from './pages/Realisateur';
+import Interviewer from './pages/Interviewer';
+import Traducteur from './pages/Traducteur';
+import Videosdestorytelling from './pages/Videosdestorytelling';
+import Videospourlinkedin from './pages/Videospourlinkedin';
+import Videospourledroit from './pages/Videospourledroit';
+import Restaurateurs from './pages/Restaurateurs';
 
 function App() {
   return (
@@ -34,6 +45,17 @@ function App() {
           <Route path="/relationspublics" element={<Relations />} />
           <Route path="/live" element={<Live />} />
           <Route path="/visiteguidee" element={<Visite />} />
+          <Route path="/filmmaker" element={<Filmmaker />} />
+          <Route path="/storyteller" element={<Storyteller />} />
+          <Route path="/monteur" element={<Monteur />} />
+          <Route path="/motiondesigner" element={<Motiondesigner />} />
+          <Route path="/realisateur" element={<Realisateur />} />
+          <Route path="/interviewer" element={<Interviewer />} />
+          <Route path="/traducteur" element={<Traducteur />} />
+          <Route path="/videosdestorytelling" element={<Videosdestorytelling />} />
+          <Route path="/videospourlinkedin" element={<Videospourlinkedin />} />
+          <Route path="/videospourledroit" element={<Videospourledroit />} />
+          <Route path="/videospourlesrestaurateurs" element={<Restaurateurs />} />
         </Route>
       </Routes>
   );

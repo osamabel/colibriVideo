@@ -9,7 +9,7 @@ function Home() {
     <div className='relative'>
         <Hero />
       
-        <Entreprises />
+        <Entreprises/>
         <More 
         title='Les vidéos les plus demandées' 
         desc='Choisissez celles qui correspondent à vos objectifs et démarrer tout de suite' 

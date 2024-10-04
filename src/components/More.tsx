@@ -15,7 +15,7 @@ function More({title, desc, link}: MoreProps) {
             
             <NavLink to={`/${link}`}>
                 <div className='flex items-center justify-center relative cursor-pointer group'>
-                    <div className='bg-white text-[12px] px-[20px] py-[7px] rounded-full z-[10]'>Voir plus de vidéos</div>
+                    <div className='bg-white text-[12px] px-[20px] py-[7px] rounded-full z-[10]'>Plus de vidéos</div>
                     <div className='absolute w-full h-[1px] bg-black/10'></div>
                 </div>
             </NavLink>

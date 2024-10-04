@@ -17,7 +17,7 @@ const companies = [
   { id: 14, name: 'RSP Groupe', logo: './campanies/rsp.png', link: '#' },
 ];
 
-function Entreprises() {
+function Entreprises({isTitle=false}) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [direction, setDirection] = useState<'left' | 'right'>('right');
   const [isHovered, setIsHovered] = useState(false);
@@ -48,7 +48,7 @@ function Entreprises() {
     if (direction === 'left' && currentSlide <= 0) {
       setCurrentSlide(companies.length * 100);
     }
-  }, [currentSlide, direction, companies.length]);
+  }, [currentSlide, direction]);
 
   const handleLeftClick = () => {
     setDirection('left');
@@ -84,28 +84,31 @@ function Entreprises() {
             onClick={handleRightClick}
           >→</button>
         </div>
-        <h1 className="text-center text-[16px] lg:text-[18px] font-Lato font-[300]">
-          Plus de 300 entreprises nous font confiance.
-        </h1>
+        {
+          isTitle &&
+          <h1 className="text-center text-[16px] lg:text-[18px] font-Lato font-[300]">
+            Plus de 300 entreprises nous font confiance.
+          </h1>
+        }
       </div>
       <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         className="flex w-max transition-transform duration-[100ms] ease-linear"
         style={{ transform: `translateX(-${currentSlide}px)` }}
       >
-        {clonedCompanies.map((company) => (
+        {clonedCompanies.map((company, index) => (
           <a
-            key={company.id}
+            key={index}
             href={company.link}
-            className="flex justify-center items-center min-w-[120px] lg:min-w-[200px] p-2 "
+            className="flex justify-center items-center min-w-[120px] lg:min-w-[200px] p-2"
             target="_blank"
             rel="noopener noreferrer"
           >
             <img
               src={company.logo}
               alt={company.name}
-              className="w-[70px] lg:max-w-[100px] lg:w-auto max-h-[100px] filter sm:grayscale hover:filter-none transition-all duration-300"
+              className="w-[70px] lg:max-w-[100px] lg:w-auto max-h-[100px] transition-all duration-300"
             />
           </a>
         ))}

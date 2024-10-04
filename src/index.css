@@ -23,6 +23,16 @@ body{
 }
 
 .gradientLight{
-  background: rgb(255,255,255);
-  background: linear-gradient(130deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 100%);
+  background: rgb(255,188,203);
+  background: linear-gradient(158deg, rgba(255,188,203,0.18533350840336138) 0%, rgba(255,255,255,1) 52%, rgba(255,255,255,1) 85%);
+}
+.softshad{
+  box-shadow: 0px 10px 86px -38px rgba(105,105,105,0.75);
+  -webkit-box-shadow: 0px 10px 86px -38px rgba(105,105,105,0.75);
+  -moz-box-shadow: 0px 10px 86px -38px rgba(105,105,105,0.75);
+}
+.softshadSecondary{
+  box-shadow: 0px 0px 31px -10px rgba(191,34,66,0.1);
+  -webkit-box-shadow: 0px 0px 31px -10px rgba(191,34,66,0.1);
+  -moz-box-shadow: 0px 0px 31px -10px rgba(191,34,66,0.1);
 }

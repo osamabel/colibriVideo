@@ -40,9 +40,8 @@ function Footer() {
           <ul className='flex flex-col gap-y-[10px]'>
             {
               video.map((item, index) => (
-                <li>
+                <li key={index}>
                     <Link
-                        key={index}
                         to={item.link}
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="font-[300] text-[16px] hover:opacity-60 opacity-40 border-b-2 border-transparent py-[2px] hover:border-secondary transition-colors t-300"
@@ -59,9 +58,8 @@ function Footer() {
           <ul className='flex flex-col gap-y-[10px]'>
             {
               creators.map((item, index) => (
-                <li>
+                <li key={index}>
                     <Link
-                        key={index}
                         to={item.link}
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="font-[300] text-[16px] hover:opacity-60 opacity-40 border-b-2 border-transparent py-[2px] hover:border-secondary transition-colors t-300"
@@ -78,9 +76,8 @@ function Footer() {
           <ul className='flex flex-col gap-y-[10px]'>
             {
               Collections.map((item, index) => (
-                <li>
+                <li key={index}>
                     <Link
-                        key={index}
                         to={item.link}
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                         className="font-[300] text-[16px] hover:opacity-60 opacity-40 border-b-2 border-transparent py-[2px] hover:border-secondary transition-colors t-300"
